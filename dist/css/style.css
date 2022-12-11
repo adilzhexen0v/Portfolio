@@ -1,10 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @import url("../css/reset.css");
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6fafd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25d0b6;
+  border-radius: 10px;
+  border: 3px solid #f6fafd;
+}
+
+::selection {
+  background-color: #25d0b6;
+  color: #fff;
+}
+
 * {
   font-family: "Comfortaa", cursive;
 }
 
-body {
-  background-color: #ff0;
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+}
+
+.nav {
+  background: white;
+  padding: 16px 0;
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__link {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #b4b4b4;
+  margin-left: 40px;
+  transition: 0.25s ease;
+}
+.nav__link:hover {
+  color: #787878;
+}
+
+.header {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(37, 208, 182, 0.5), rgba(65, 148, 204, 0.5)), url(../img/home_background.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header h1 {
+  max-width: 720px;
+  font-size: 56px;
+  line-height: 72px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+.header p {
+  max-width: 840px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+#about {
+  height: 100vh;
+  background: #f6fafd;
+}
+
+#profile__picture {
+  width: 120px;
+  position: absolute;
+  bottom: 0;
+}
+
+.about__nav {
+  padding: 12px 0;
+  background: white;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  position: relative;
+}
+.about__nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__nav-info {
+  margin-left: 150px;
+}
+.about__nav-name {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #787878;
+}
+.about__nav-major {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #b4b4b4;
+}
+.about__nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+.about__nav-link i {
+  color: #b4b4b4;
+  font-size: 24px;
 }
 /*# sourceMappingURL=style.css.map */

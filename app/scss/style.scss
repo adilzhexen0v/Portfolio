@@ -3,10 +3,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @import url('../css/reset.css');
 
+// Scrollbar
+::-webkit-scrollbar{
+     width: 15px;
+}
+
+::-webkit-scrollbar-track{
+     background: $bg;
+}
+
+::-webkit-scrollbar-thumb{
+     background: $turquoise;
+     border-radius: 10px;
+     border: 3px solid $bg;
+}
+
+::selection{
+     background-color: $turquoise;
+     color: #fff;
+}
+
 *{
      font-family: 'Comfortaa', cursive;
 }
 
-body{
-     background-color: #ff0;
+.container{
+     width: $containerWidth;
+     margin: 0 auto;
+}
+
+.logo{
+     @include flex($jc: flex-start);
+     img{
+          width: 40px;
+     }
+}
+
+// Nav
+.nav{
+     background:white;
+     padding: 16px 0;
+     .container{
+          @include flex();
+     }
+     &__link{
+          @include text(18px, 26px, 500, $gray);
+          margin-left: 40px;
+          transition: 0.25s ease;
+          &:hover{
+               color: $darkGray;
+          }
+     }
+}
+
+// Header
+.header{
+     height: 100vh;
+     background: $homeGradient, url(../img/home_background.jpg);
+     @include flex(center, center);
+     flex-direction: column;
+     h1{
+          max-width: 720px;
+          @include text(56px, 72px, 700, white);
+          text-align: center;
+     }
+     p{
+          max-width: 840px;
+          @include text(20px, 28px, 500, white);
+          text-align: center;
+     }
+}
+
+// About me
+#about{
+     height: 100vh;
+     background: $bg;
+}
+#profile__picture{
+     width: 120px;
+     position: absolute;
+     bottom: 0;
+}
+.about{
+     &__nav{
+          padding: 12px 0;
+          background: white;
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+          position: relative;
+          .container{
+               @include flex();
+          }
+          &-info{
+               margin-left: 150px;
+          }
+          &-name{
+               @include text(24px, 32px, 700, $darkGray);
+          }
+          &-major{
+               @include text(18px, 24px, 400, $gray);
+          }
+          &-links{
+               @include flex($jc: flex-end);
+               gap: 16px;
+          }
+          &-link{
+               i{
+                    color: $gray;
+                    font-size: 24px;
+               }
+          }
+     }
 }
